@@ -1,0 +1,32 @@
+{
+    "name": "shadowalkerwei/UmengPusher",
+    "description": "umeng for laravel",
+    "keywords": [
+        "laravel",
+        "lumen",
+        "umeng"
+    ],
+    "homepage": "https://github.com/shadowalkerwei/UmengPusher",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "GuoWei",
+            "email": "468699340@qq.com"
+        }
+    ],
+    "require": {
+        "illuminate/support": "~5.1",
+        "php" : "~5.6|~7.3.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gw\\Umeng\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Gw\\Umeng\\": "tests"
+        }
+    },
+     "minimum-stability": "stable"
+}
