@@ -2,7 +2,7 @@
 
 ## 安装
 ```php
-    composer reuqire Gw/umeng   
+    composer reuqire gw/umeng   
 ```
   
 ## Laravel 5.* 配置
