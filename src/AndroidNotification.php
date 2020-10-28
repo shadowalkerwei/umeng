@@ -20,6 +20,7 @@ abstract class AndroidNotification extends UmengNotification {
 															"play_lights"  => "true",
 															"play_sound"   => "true",
 															"after_open"   => NULL,
+															"bar_image"   => NULL,
 															//"url"        => "xx",
 															//"activity"   => "xx",
 															//custom       => "xx"
@@ -30,7 +31,7 @@ abstract class AndroidNotification extends UmengNotification {
 	protected $PAYLOAD_KEYS = array("display_type");
 
 	// Keys can be set in the body level
-	protected $BODY_KEYS    = array("ticker", "title", "text", "builder_id", "icon", "largeIcon", "img", "play_vibrate", "play_lights", "play_sound", "after_open", "url", "activity", "custom" ,  "sound");
+	protected $BODY_KEYS    = array("ticker", "title", "text", "builder_id", "icon", "largeIcon", "img", "play_vibrate", "play_lights", "play_sound", "after_open", "url", "activity", "custom" ,  "sound" , "bar_image");
 
 	function __construct() {
 		parent::__construct();
@@ -53,6 +54,7 @@ abstract class AndroidNotification extends UmengNotification {
 				$this->data["payload"]["body"]["title"] = "";
 				$this->data["payload"]["body"]["text"] = "";
 				$this->data["payload"]["body"]["after_open"] = "";
+				$this->data["payload"]["body"]["bar_image"] = "";
 				if (!array_key_exists("custom", $this->data["payload"]["body"])) {
 					$this->data["payload"]["body"]["custom"] = NULL;
 				}
