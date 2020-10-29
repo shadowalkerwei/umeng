@@ -50,8 +50,8 @@ class AndroidPusher extends Pusher
      * @return mixed
      * @throws \Gw\Umeng\Exception\UmengException
      */
-    public function sendUnicast($device_tokens = '', $predefined= [], $extraField = []) {
-        $unicast = new AndroidUnicast();
+    public function sendUnicast($device_tokens = '', $predefined= [], $extraField = [] , $bar = false) {
+        $unicast = new AndroidUnicast($bar);
         $unicast->setAppMasterSecret($this->appMasterSecret);
         $unicast->setPredefinedKeyValue("appkey",           $this->appKey);
         $unicast->setPredefinedKeyValue("timestamp",        $this->timestamp);
